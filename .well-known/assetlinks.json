@@ -1,0 +1,9 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.rabindranathferreira.deeplink",
+      "sha256_cert_fingerprints":
+      ["0B:77:08:0C:EB:C6:F1:7A:4E:42:5D:6D:A7:A6:C2:6D:F0:AA:D1:82:5A:9D:0C:27:90:9A:71:C4:D3:1D:B1:7E"]
+    }
+  }]
