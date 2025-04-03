@@ -4,51 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokémon Landing Page with DeepLinking</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-    }
-    header {
-      background-color: #ef5350;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .pokemon-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .pokemon-card {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      padding: 20px;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-    .pokemon-card:hover {
-      transform: scale(1.05);
-    }
-    .pokemon-card img {
-      width: 100px;
-      height: 100px;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #ef5350;
-      color: white;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -75,7 +31,7 @@
         // Navigate to detail pages for the first 10 Pokémon
         if (i <= 10) {
           card.addEventListener('click', () => {
-            window.location.href = `details-${i}.html`;
+            window.location.href = `pokemons/${i}/index.html`;
           });
         }
         container.appendChild(card);
