@@ -31,10 +31,8 @@
 
     window.onload = function() {
       const targetPath = getTargetPath();
-      // Construye el enlace profundo basado en tu dominio
       const appLink = "https://poke-deeplinking-poc.up.railway.app" + targetPath;
 
-      // Intenta abrir la app
       window.location = appLink;
 
       setTimeout(function() {
