@@ -26,6 +26,7 @@ const getTargetPath = (): string => {
 const DeepLinking: React.FC = () => {
   useEffect(() => {
     const targetPath = getTargetPath();
+    console.log('🚀 ~ DeepLinking ~ targetPath:', targetPath);
     const appLink = `https://poke-deeplinking-poc.up.railway.app${targetPath}`;
 
     // Attempt to open the app
@@ -38,7 +39,7 @@ const DeepLinking: React.FC = () => {
       } else if (os === 'ios') {
         window.location.href = 'https://apps.apple.com/app/ikea-home/id6476172259';
       } else {
-        document.body.innerHTML = '<p>Por favor, utiliza un dispositivo móvil para instalar la app.</p>';
+        document.querySelector('section p')!.innerHTML = '<strong>Please use a mobile device to install the app.</strong>';
       }
     }, 100000);
 
@@ -50,7 +51,10 @@ const DeepLinking: React.FC = () => {
       <header>
         <h1>Welcome to the Pokémon World, you will see it soon</h1>
       </header>
-      <p>Redirecting, please wait...</p>
+      <section style={{ textAlign: 'center', marginTop: '20px' }}>
+        <h2>Redirecting</h2>
+        <p>Please wait while we take you to your destination...</p>
+      </section>
       <footer>
         <p>
           Powered by{' '}
