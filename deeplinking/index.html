@@ -23,10 +23,15 @@
     }
 
     // Extrae el parámetro "target" (por ejemplo, ?target=/detalle/123)
+    // function getTargetPath() {
+    //   const params = new URLSearchParams(window.location.search);
+    //   console.log("🚀 ~ getTargetPath ~ params:", params);
+    //   return params.get('target') || '/';
+    // }
+
     function getTargetPath() {
-      const params = new URLSearchParams(window.location.search);
-      console.log("🚀 ~ getTargetPath ~ params:", params);
-      return params.get('target') || '/';
+      const path = window.location.pathname + window.location.search + window.location.hash;
+      return path || '/';
     }
 
     window.onload = function() {
